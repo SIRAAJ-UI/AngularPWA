@@ -42,17 +42,6 @@
             /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"ui three item menu\">\n  <a class=\"item\" [routerLink]=\"['']\">QR Scanner</a>\n</div>\n");
             /***/ 
         }),
-        /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/registration/registration.component.html": 
-        /*!************************************************************************************************!*\
-          !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/registration/registration.component.html ***!
-          \************************************************************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"registration\">\n  <h2>QR Code Registration App!</h2>\n  <span>Please enter your information to register for the event.</span>\n  <div class=\"registration-form\">\n    <form [formGroup]=\"registrationForm\" (ngSubmit)=\"onSubmit()\">\n      <div class=\"ui left corner labeled input field\">\n        <input\n          type=\"text\"\n          placeholder=\"Fist Name\"\n          formControlName=\"firstName\"\n        />\n        <div class=\"ui left corner label\">\n          <i class=\"asterisk icon\"></i>\n        </div>\n      </div>\n      <div class=\"ui left corner labeled input field\">\n        <input type=\"text\" placeholder=\"Last Name\" formControlName=\"lastName\" />\n        <div class=\"ui left corner label\">\n          <i class=\"asterisk icon\"></i>\n        </div>\n      </div>\n      <button\n        class=\"ui inverted orange button\"\n        type=\"submit\"\n        [disabled]=\"!registrationForm.valid\"\n      >\n        Registration\n      </button>\n    </form>\n  </div>\n</div>\n");
-            /***/ 
-        }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/scanner/scanner.component.html": 
         /*!**************************************************************************************!*\
           !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/scanner/scanner.component.html ***!
@@ -450,11 +439,10 @@
             /* harmony import */ var _angular_service_worker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/service-worker */ "./node_modules/@angular/service-worker/fesm2015/service-worker.js");
             /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
             /* harmony import */ var _scanner_scanner_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scanner/scanner.component */ "./src/app/scanner/scanner.component.ts");
-            /* harmony import */ var _registration_registration_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./registration/registration.component */ "./src/app/registration/registration.component.ts");
-            /* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./navbar/navbar.component */ "./src/app/navbar/navbar.component.ts");
-            /* harmony import */ var ngx_qrcode2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-qrcode2 */ "./node_modules/ngx-qrcode2/index.js");
-            /* harmony import */ var _zxing_ngx_scanner__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @zxing/ngx-scanner */ "./node_modules/@zxing/ngx-scanner/fesm2015/zxing-ngx-scanner.js");
-            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+            /* harmony import */ var _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./navbar/navbar.component */ "./src/app/navbar/navbar.component.ts");
+            /* harmony import */ var ngx_qrcode2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-qrcode2 */ "./node_modules/ngx-qrcode2/index.js");
+            /* harmony import */ var _zxing_ngx_scanner__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @zxing/ngx-scanner */ "./node_modules/@zxing/ngx-scanner/fesm2015/zxing-ngx-scanner.js");
+            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
             var AppModule = /** @class */ (function () {
                 function AppModule() {
                 }
@@ -465,8 +453,7 @@
                     declarations: [
                         _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
                         _scanner_scanner_component__WEBPACK_IMPORTED_MODULE_7__["ScannerComponent"],
-                        _registration_registration_component__WEBPACK_IMPORTED_MODULE_8__["RegistrationComponent"],
-                        _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_9__["NavbarComponent"]
+                        _navbar_navbar_component__WEBPACK_IMPORTED_MODULE_8__["NavbarComponent"]
                     ],
                     imports: [
                         _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -474,9 +461,9 @@
                         _angular_service_worker__WEBPACK_IMPORTED_MODULE_5__["ServiceWorkerModule"].register("ngsw-worker.js", {
                             enabled: _environments_environment__WEBPACK_IMPORTED_MODULE_6__["environment"].production
                         }),
-                        _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"],
-                        _zxing_ngx_scanner__WEBPACK_IMPORTED_MODULE_11__["ZXingScannerModule"],
-                        ngx_qrcode2__WEBPACK_IMPORTED_MODULE_10__["NgxQRCodeModule"]
+                        _angular_forms__WEBPACK_IMPORTED_MODULE_11__["ReactiveFormsModule"],
+                        _zxing_ngx_scanner__WEBPACK_IMPORTED_MODULE_10__["ZXingScannerModule"],
+                        ngx_qrcode2__WEBPACK_IMPORTED_MODULE_9__["NgxQRCodeModule"]
                     ],
                     providers: [],
                     bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -569,67 +556,6 @@
             ], NavbarComponent);
             /***/ 
         }),
-        /***/ "./src/app/registration/registration.component.scss": 
-        /*!**********************************************************!*\
-          !*** ./src/app/registration/registration.component.scss ***!
-          \**********************************************************/
-        /*! exports provided: default */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = (".registration {\n  text-align: center;\n  margin: 8px;\n}\n.registration-form form {\n  display: flex;\n  flex-direction: column;\n}\n.registration-form form .field {\n  margin: 8px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVnaXN0cmF0aW9uL0M6XFxVc2Vyc1xca3NpcmFcXERvd25sb2Fkc1xcQW5ndWxhclBXQS9zcmNcXGFwcFxccmVnaXN0cmF0aW9uXFxyZWdpc3RyYXRpb24uY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL3JlZ2lzdHJhdGlvbi9yZWdpc3RyYXRpb24uY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBQTtFQUNBLFdBQUE7QUNDRjtBRENJO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0FDQ047QURDTTtFQUNFLFdBQUE7QUNDUiIsImZpbGUiOiJzcmMvYXBwL3JlZ2lzdHJhdGlvbi9yZWdpc3RyYXRpb24uY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVnaXN0cmF0aW9uIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW46IDhweDtcbiAgJi1mb3JtIHtcbiAgICBmb3JtIHtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuXG4gICAgICAuZmllbGQge1xuICAgICAgICBtYXJnaW46IDhweDtcbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiIsIi5yZWdpc3RyYXRpb24ge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbjogOHB4O1xufVxuLnJlZ2lzdHJhdGlvbi1mb3JtIGZvcm0ge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuLnJlZ2lzdHJhdGlvbi1mb3JtIGZvcm0gLmZpZWxkIHtcbiAgbWFyZ2luOiA4cHg7XG59Il19 */");
-            /***/ 
-        }),
-        /***/ "./src/app/registration/registration.component.ts": 
-        /*!********************************************************!*\
-          !*** ./src/app/registration/registration.component.ts ***!
-          \********************************************************/
-        /*! exports provided: RegistrationComponent */
-        /***/ (function (module, __webpack_exports__, __webpack_require__) {
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegistrationComponent", function () { return RegistrationComponent; });
-            /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-            /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-            /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-            /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! uuid */ "./node_modules/uuid/index.js");
-            /* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/ __webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_3__);
-            /* harmony import */ var _guest_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../guest.service */ "./src/app/guest.service.ts");
-            /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-            var RegistrationComponent = /** @class */ (function () {
-                function RegistrationComponent(fb, guestService, router) {
-                    this.fb = fb;
-                    this.guestService = guestService;
-                    this.router = router;
-                    this.registrationForm = this.fb.group({
-                        firstName: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
-                        lastName: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
-                    });
-                }
-                RegistrationComponent.prototype.ngOnInit = function () { };
-                RegistrationComponent.prototype.onSubmit = function () {
-                    var guest = Object.assign({}, this.registrationForm.value, { id: Object(uuid__WEBPACK_IMPORTED_MODULE_3__["v4"])() });
-                    guest.qr = JSON.stringify(guest);
-                    this.guestService.addGuest(guest);
-                    this.registrationForm.reset();
-                    this.router.navigate(["/guests"]);
-                };
-                return RegistrationComponent;
-            }());
-            RegistrationComponent.ctorParameters = function () { return [
-                { type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"] },
-                { type: _guest_service__WEBPACK_IMPORTED_MODULE_4__["GuestService"] },
-                { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }
-            ]; };
-            RegistrationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-                Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: "app-registration",
-                    template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./registration.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/registration/registration.component.html")).default,
-                    styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./registration.component.scss */ "./src/app/registration/registration.component.scss")).default]
-                })
-            ], RegistrationComponent);
-            /***/ 
-        }),
         /***/ "./src/app/scanner/scanner.component.scss": 
         /*!************************************************!*\
           !*** ./src/app/scanner/scanner.component.scss ***!
@@ -667,8 +593,8 @@
                     this.guestExist = null;
                     if (this.checkQRJSON(resultString)) {
                         this.qrResult = JSON.parse(resultString);
-                        this.checkInGuest();
-                        this.clearMessage();
+                        // this.checkInGuest();
+                        // this.clearMessage();
                     }
                     else {
                         this.guestExist = false;

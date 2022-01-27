@@ -28,8 +28,8 @@ export class ScannerComponent implements OnInit {
     this.guestExist = null;
     if (this.checkQRJSON(resultString)) {
       this.qrResult = JSON.parse(resultString);
-      this.checkInGuest();
-      this.clearMessage();
+      // this.checkInGuest();
+      // this.clearMessage();
     } else {
       this.guestExist = false;
       this.clearMessage();
