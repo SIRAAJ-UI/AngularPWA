@@ -1,12 +1,12 @@
 <div class="qr-scan-area">
   <!-- This is the npm package in-charge of scanning the QR -->
-  new scanner
   <zxing-scanner
     #scanner
     [(device)]="currentDevice"
     (scanSuccess)="onCodeResult($event)"
     (permissionResponse)="onHasPermission($event)"
   ></zxing-scanner>
+  {{qrCode}}
   <div class="qr-area">
     <div class="area"></div>
   </div>
