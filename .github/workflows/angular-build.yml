@@ -14,6 +14,7 @@ jobs:
     uses: actions/checkout@v4
 
    # Step 2: Setup Node.js version
+         echo: "setup Node.js"
         - name: Setup Node.js
           uses: actions/setup-node@v4
           with:
@@ -32,6 +33,6 @@ jobs:
   - name: Upload Build Files
     uses: actions/upload-artifact@v4
     with:
-      name: angular-dist
+      name: Angular Build CI
       path: dist/
 
