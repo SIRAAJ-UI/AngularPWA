@@ -21,7 +21,7 @@ jobs:
       # Step 2: Setup Node.js version
       - name: Setup Node.js
         uses: actions/setup-node@v4
-        echo: "setting up node"
+        run: echo "setting up node"
         with:
           node-version: 18
           cache: npm
@@ -29,9 +29,9 @@ jobs:
       # Step 3: Install dependencies from package.json
       - name: Install Dependencies
         run: npm install
-        echo: "installing dependencies"
+        run: echo "installing dependencies"
 
       # Step 4: Build Angular Project
       - name: Build Angular App
         run: npm run build --if-present
-        echo: "npm run build executed!"
+        run: echo "npm run build executed!"
