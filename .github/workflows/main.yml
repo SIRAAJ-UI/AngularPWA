@@ -1,20 +1,37 @@
-name: Angular-pwa-application
+name: Angular Build CI
 
-on: 
-    push:
-      branches:
-      - master
-    pull_request:
-      branches:
-      - master
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-    build:
-      runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
       # Step 1: Checkout repository code
       - name: Checkout Code
-      - uses: actions/checkout@v4
-      - echo: "Step one checkout code!"
+        uses: actions/checkout@v4
+        echo: "checkout repository code"
 
+      # Step 2: Setup Node.js version
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        echo: "setting up node"
+        with:
+          node-version: 18
+          cache: npm
+
+      # Step 3: Install dependencies from package.json
+      - name: Install Dependencies
+        run: npm install
+        echo: "installing dependencies"
+
+      # Step 4: Build Angular Project
+      - name: Build Angular App
+        run: npm run build --if-present
+        echo: "npm run build executed!"
