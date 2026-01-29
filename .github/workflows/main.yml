@@ -1,0 +1,20 @@
+name: Angular-pwa-application
+
+on: 
+    push:
+      branches:
+      - master
+    pull_request:
+      branches:
+      - master
+
+jobs:
+    build:
+      runs-on: ubuntu-20.04
+
+      steps:
+      # Step 1: Checkout repository code
+      - name: Checkout Code
+        echo: "Step one checkout code!"
+        uses: actions/checkout@v4
+
