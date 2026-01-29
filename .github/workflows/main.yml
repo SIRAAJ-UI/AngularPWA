@@ -15,6 +15,6 @@ jobs:
       steps:
       # Step 1: Checkout repository code
       - name: Checkout Code
-        echo: "Step one checkout code!"
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - echo: "Step one checkout code!"
 
