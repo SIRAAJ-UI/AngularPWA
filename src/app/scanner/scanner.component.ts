@@ -24,6 +24,7 @@ export class ScannerComponent implements OnInit {
     // const qrString = "Student 160622,QB Id: 14909";
     // // const qrString = "QB Id: 14909";
     // this.onQrCodeValidationCheck(qrString);
+    
   }
 
   clearResult(): void {
