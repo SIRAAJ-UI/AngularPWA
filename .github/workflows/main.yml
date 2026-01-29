@@ -36,4 +36,4 @@ jobs:
       - name: Build Angular App
         run: |
           npm run build --if-present
-          run: echo "npm run build executed!"
+          echo "npm run build executed!"
