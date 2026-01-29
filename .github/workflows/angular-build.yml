@@ -1,0 +1,29 @@
+name: Angular Build CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  # Step 1: Checkout repository code
+  - name: Checkout Code
+    uses: actions/checkout@v4
+
+   # Step 2: Setup Node.js version
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: 18
+            cache: npm
+
+  # Step 3: Install dependencies from package.json
+  - name: Install Dependencies
+    run: npm install
+
+  # Step 4: Build Angular Project
+  - name: Build Angular App
+    run: npm run build --if-present
